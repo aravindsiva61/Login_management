@@ -30,7 +30,7 @@ jobs:
       run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
     - name: Build Binary
-      run: go build -o login-${{ env.VERSION }} main.go 
+      run: go build -o login-${{ env.VERSION }} 
 
     - name: Upload Binary to GitHub Releases
       uses: softprops/action-gh-release@v2
